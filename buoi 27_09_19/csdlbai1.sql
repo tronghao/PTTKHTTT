@@ -1,3 +1,8 @@
+CREATE DATABASE NHANKHAU
+GO
+
+USE NHANKHAU
+GO
 /*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2008                    */
 /* Created on:     27/09/2019 8:09:10 AM                        */
@@ -190,7 +195,11 @@ insert into SOHOKHAU values(6, 6, 'Pham Huynh Viet Tu', '252/12', 'Luong Hoa', '
 insert into SOHOKHAU values(7, 7, 'Doan Thi Yen Nhi', '251/12', 'Long Toan', 'Long Dien')
 insert into SOHOKHAU values(8, 8, 'Thach Visal', '250/12', 'Long Khanh', 'Long Vinh')
 
-insert into NHANKHAU values()
+insert into NHANKHAU values(1, 1, 'Vo Le Khanh Duy', 'Nam', '05/25/1999')
+insert into NHANKHAU values(2, 2, 'Nguyen Huynh Cong Minh', 'Nam', '03/30/1999')
+
 
 select * from QUANHUYEN 
 select * from PHUONGXA
+select * from SOHOKHAU
+select * from NHANKHAU
