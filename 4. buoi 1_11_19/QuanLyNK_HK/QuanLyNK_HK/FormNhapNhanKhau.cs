@@ -28,6 +28,7 @@ namespace QuanLyNK_HK
             chbNam.Checked = false;
             chbNu.Checked = false;
             txbHoTen.Text = "";
+            dtNgaySinh.Text = "01/01/1900";
         }
     }
 }

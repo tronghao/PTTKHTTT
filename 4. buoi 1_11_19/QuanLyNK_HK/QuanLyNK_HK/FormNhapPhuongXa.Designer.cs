@@ -36,7 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cmbTenQH = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDuLieu = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnLamRong = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDuLieu)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,13 +129,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phường - xã";
             // 
-            // dataGridView1
+            // dgvDuLieu
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 206);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(467, 104);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvDuLieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDuLieu.Location = new System.Drawing.Point(13, 206);
+            this.dgvDuLieu.Name = "dgvDuLieu";
+            this.dgvDuLieu.Size = new System.Drawing.Size(467, 104);
+            this.dgvDuLieu.TabIndex = 4;
             // 
             // panel1
             // 
@@ -212,14 +212,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(501, 373);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDuLieu);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormNhapPhuongXa";
             this.Text = "Nhập Quận Huyện";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDuLieu)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -236,7 +236,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbTenQH;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDuLieu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnThoat;

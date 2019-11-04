@@ -21,5 +21,10 @@ namespace QuanLyNK_HK
         {
             this.Close();
         }
+
+        private void btnLamRong_Click(object sender, EventArgs e)
+        {
+            txbHoTenChuHo.Text = txbSoNha.Text = txbTenDuongPho.Text = txbKhuPhoAp.Text = "";
+        }
     }
 }
