@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnectionString.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +62,12 @@
     </Compile>
     <Compile Include="FormNhapPhuongXa.Designer.cs">
       <DependentUpon>FormNhapPhuongXa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNhapQuanHuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhapQuanHuyen.Designer.cs">
+      <DependentUpon>FormNhapQuanHuyen.cs</DependentUpon>
     </Compile>
     <Compile Include="FormNhapSoHoKhau.cs">
       <SubType>Form</SubType>
@@ -83,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNhapPhuongXa.resx">
       <DependentUpon>FormNhapPhuongXa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNhapQuanHuyen.resx">
+      <DependentUpon>FormNhapQuanHuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNhapSoHoKhau.resx">
       <DependentUpon>FormNhapSoHoKhau.cs</DependentUpon>

@@ -42,5 +42,11 @@ namespace QuanLyNK_HK
             fr.Show();
             fr.StartPosition = FormStartPosition.CenterParent;
         }
+
+        private void quậnHuyệnToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormNhapQuanHuyen fr = new FormNhapQuanHuyen();
+            fr.Show();
+        }
     }
 }
