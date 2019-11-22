@@ -131,9 +131,12 @@
             // 
             // dgvDuLieu
             // 
+            this.dgvDuLieu.AllowUserToAddRows = false;
+            this.dgvDuLieu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDuLieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDuLieu.Location = new System.Drawing.Point(13, 206);
             this.dgvDuLieu.Name = "dgvDuLieu";
+            this.dgvDuLieu.ReadOnly = true;
             this.dgvDuLieu.Size = new System.Drawing.Size(467, 104);
             this.dgvDuLieu.TabIndex = 4;
             // 
@@ -159,6 +162,7 @@
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnThoat
             // 

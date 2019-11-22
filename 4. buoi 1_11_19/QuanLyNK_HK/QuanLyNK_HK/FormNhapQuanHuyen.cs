@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+
 
 namespace QuanLyNK_HK
 {
@@ -19,21 +20,10 @@ namespace QuanLyNK_HK
             layDuLieu();
         }
 
-        private SqlConnection connect = new SqlConnection(ConnectionString.connectionString);
-        private SqlDataAdapter adapter;
         private DataTable bangDuLieu = new DataTable();
-        private SqlCommandBuilder capNhat;
         private int idNew;
         private int viTri = -1;
-        public void ketNoiCSDL()
-        {
-            connect.Open();
-        }
         
-        public void NgatKetNoiCSDL()
-        {
-            connect.Close();
-        }
 
         public void capNhatIdNew()
         {
@@ -43,14 +33,15 @@ namespace QuanLyNK_HK
         }
         public void layDuLieu()
         {
-            ketNoiCSDL();
+            ConnectionString.ketNoiCSDL();
 
             String query = "select * from QUANHUYEN";
-            adapter = new SqlDataAdapter(query, connect);
-            adapter.Fill(bangDuLieu);
+            ConnectionString.query(query, bangDuLieu);
+            
             dgvDuLieu.DataSource = bangDuLieu;
             capNhatIdNew();
-            NgatKetNoiCSDL();
+
+            ConnectionString.NgatKetNoiCSDL();
         }
 
 
@@ -60,13 +51,7 @@ namespace QuanLyNK_HK
             txbTenQH.Text = "";
         }
 
-        public void capNhatDuLieu()
-        {
-            capNhat = new SqlCommandBuilder(adapter);
-            adapter.Update(bangDuLieu);
-            bangDuLieu.Clear();
-            layDuLieu();
-        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             if(txbMaQH.Text != idNew.ToString())
@@ -82,7 +67,9 @@ namespace QuanLyNK_HK
                     dongmoi["TENQUANHUYEN"] = txbTenQH.Text;
                     bangDuLieu.Rows.Add(dongmoi);
 
-                    capNhatDuLieu();
+                    ConnectionString.capNhatDuLieu(bangDuLieu, "QUANHUYEN");
+                    layDuLieu();
+
                     viTri = -1;
                     MessageBox.Show("Thêm Thành Công!");
                 }
@@ -111,7 +98,8 @@ namespace QuanLyNK_HK
             {
                 bangDuLieu.Rows[viTri][0] = txbMaQH.Text;
                 bangDuLieu.Rows[viTri][1] = txbTenQH.Text;
-                capNhatDuLieu();
+                ConnectionString.capNhatDuLieu(bangDuLieu, "QUANHUYEN");
+                layDuLieu();
                 MessageBox.Show("Sửa Thành Công!");
             }
             else
@@ -125,7 +113,8 @@ namespace QuanLyNK_HK
             if (viTri > -1)
             {
                 bangDuLieu.Rows[viTri].Delete();
-                capNhatDuLieu();
+                ConnectionString.capNhatDuLieu(bangDuLieu, "QUANHUYEN");
+                layDuLieu();
                 MessageBox.Show("Xóa Thành Công!");
             }
             else
